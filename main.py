@@ -13,12 +13,31 @@ def menu():
   print('0: exit')
 
 menu()
-user_choice = int(input('please select the field that pertains to you'))
+user_choice = int(input('please select the field that pertains to you: '))
 
 while user_choice != 0:
   if user_choice == 1:
     print()
-    print('1')
+    user_choice = input('Have you tried ... ')
+    if user_choice == 'yes':
+      user_choice = input('Have you tried ... ')
+      if user_choice == 'yes':
+        user_choice = input('Have you tried ... ')
+        if user_choice == 'yes':
+          print('Im sorry I couldnt help please call tech support instead')
+          user_choice = 0
+        elif user_choice == 'no':
+          print('try that and come back again')
+        else:
+          print('Im sorry that isnt an option try typing yes or no')
+      elif user_choice == 'no':
+        print('try that and come back again')
+      else:
+        print('Sorry that isnt an option try typing yes or no')
+    elif user_choice == 'no':
+      print('try that and then come back')
+    else:
+      print('Im sorry that isnt an option please type yes or no')
   elif user_choice == 2:
     print()
     print('2')
@@ -34,6 +53,7 @@ while user_choice != 0:
 
   print()
   menu()
-  user_choice = int(input('please select the field that pertains to you'))
+  user_choice = int(input('please select the field that pertains to you: '))
 
+print()
 print('Thank you for  using customer service chatbot!')

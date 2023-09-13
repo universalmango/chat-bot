@@ -8,12 +8,20 @@ print('How may I help you.')
 def menu():
   print('1: My device isnt working')
   print('2: I cant find an item')
-  print('3: place holder')
-  print('4: place holder')
+  print('3: Im reporting an incident')
+  print('0: exit')
+
+def second_menu():
+  print('1: an employee was not doing their job')
+  print('2: an employee is being harassed')
+  print('3: a customer is being harassed')
+  print('4: there is a fight')
+  print('5: there is a thief')
   print('0: exit')
 
 menu()
 user_choice = int(input('please select the field that pertains to you: '))
+where = 0
 
 while user_choice != 0:
   if user_choice == 1:
@@ -65,10 +73,28 @@ while user_choice != 0:
       user_choice = 0
   elif user_choice == 3:
     print()
-    print('3')
-  elif user_choice == 4:
-    print()
-    print('4')
+    second_menu()
+    user_choice = int(input('Select the field that applies: '))
+
+    while True:
+      if user_choice == 1:
+        print()
+        employee_badge = int(input('Please input employee badge number: '))
+        print('Thank you for telling us about this issue!')
+        break
+      elif user_choice == 2:
+        print('please tell us where this happened')
+        where = input('please say the isle or chekout then the number exmp: isle 1: ')
+      elif user_choice == 3:
+        print('3')
+      elif user_choice == 4:
+        print('4')
+      elif user_choice == 5:
+        print('5')
+      elif user_choice == 0:
+        break
+      else:
+        print('Sorry that isnt an option')
   else:
     print()
     print('invalid option')

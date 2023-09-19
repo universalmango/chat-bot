@@ -22,6 +22,7 @@ def second_menu():
 menu()
 user_choice = int(input('please select the field that pertains to you: '))
 where = 0
+confirm = 0
 
 while user_choice != 0:
   if user_choice == 1:
@@ -83,14 +84,25 @@ while user_choice != 0:
         print('Thank you for telling us about this issue!')
         break
       elif user_choice == 2:
+        print()
         print('please tell us where this happened')
         where = input('please say the isle or chekout then the number exmp: isle 1: ')
+        break
       elif user_choice == 3:
-        print('3')
+        print()
+        print('please tell us where this happened ')
+        where = input('please say the isle or chekout then the number exmp: isle 1: ')
+        break
       elif user_choice == 4:
-        print('4')
+        print()
+        print('please tell us where this is happening ')
+        where = input('please say the isle or chekout then the number exmp: isle 1: ')
+        break
       elif user_choice == 5:
-        print('5')
+        print()
+        print('please tell us what the thief is wearing and what clothes they have on')
+        who = input('If you have it please also tell us the license plate number: ')
+        break
       elif user_choice == 0:
         break
       else:
@@ -99,6 +111,18 @@ while user_choice != 0:
     print()
     print('invalid option')
 
+  while True:
+    print()
+    confirm = input('is that all? (yes, or no) ')
+    if confirm == 'yes':
+      user_choice = 0
+      break
+    elif confirm == 'no':
+      user_choice = 1
+      break
+    else:
+      print('Im sorry that isnt an option try typing yes or no in all lowercase')
+        
   if user_choice != 0:
     print()
     menu()

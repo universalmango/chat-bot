@@ -28,13 +28,13 @@ while user_choice != 0:
   if user_choice == 1:
     while user_choice != 0:
       print()
-      user_choice = input('Have you tried ... ')
+      user_choice = input('Have you tried switching out with a fresh battery? ')
       if user_choice == 'yes':
         print()
-        user_choice = input('Have you tried ... ')
+        user_choice = input('Have you tried checking for any damaged parts ')
         if user_choice == 'yes':
           print()
-          user_choice = input('Have you tried ... ')
+          user_choice = input('Have you tried checking for liquid damage ')
           if user_choice == 'yes':
             print()
             print('Im sorry I couldnt help please call tech support instead')
